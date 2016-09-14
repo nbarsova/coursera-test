@@ -1,0 +1,18 @@
+<html ng-app="LunchApp">
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>Lunch checker</title>
+</head>
+<body ng-controller='LunchController'>
+  <div id="lunchInput">
+    Please enter your lunch menu, separated by commas.<br>
+    NB. Empty items (i.e. item1, , ...) are considered items towards the count.<br>
+  <input type="text" ng-model='lunchContents'><br><br>
+  <button ng-click="checkLunch()">Check If Too Much</button></div><br>
+  <div id="output">
+    {{lunchMessage}}
+  </div>
+</body>
+</html>
