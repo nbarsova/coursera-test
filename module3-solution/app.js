@@ -42,6 +42,8 @@ function NarrowItDownController(MenuService) {
 
   this.narrowItDown = function ()
   {
+    if (menu.searchTerm !="")
+    {
     console.log(menu.searchTerm);
     var promise = MenuService.getMenuItems();
 
@@ -61,6 +63,9 @@ function NarrowItDownController(MenuService) {
     .catch(function (error) {
       console.log("Something went terribly wrong.");
     });
+  } else {
+    menu.found = [];
+  }
   };
 
   this.remove = function (index)
