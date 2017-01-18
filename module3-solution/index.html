@@ -19,8 +19,9 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="narrow.narrowItDown()">Narrow It Down For Me!</button>
     </div>
+    <div class="emptyMessage" ng-if="(narrow.found.length===0)"> Nothing found</div>
 
-    <found-items items="narrow.found" on-remove="narrow.remove(index)"></found-items>
+     <found-items items="narrow.found" on-remove="narrow.remove(index)"></found-items>
     </div>
   </body>
 </html>
