@@ -1,0 +1,17 @@
+input[type=text], select {
+    background-color: #61122f;
+}
+
+input[type=email], select {
+    background-color: #61122f;
+}
+
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+}
+
+legend {
+  color:white;
+}

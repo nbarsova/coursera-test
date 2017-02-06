@@ -1,0 +1,15 @@
+<div>
+  <h1>Registration Info</h1>
+<div id="notRegistered" ng-if="!infoCtrl.completed()">
+  Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a> <br>
+</div>
+<div id="reginfo" ng-if="infoCtrl.completed()">
+  First Name: {{infoCtrl.getFirstName()}} <br>
+  Last Name: {{infoCtrl.getLastName()}}<br>
+  Email: {{infoCtrl.getEmail()}} <br>
+  Favorite Dish: {{infoCtrl.getFav().name}}<br>
+    <img width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.getFav().short_name}}.jpg" alt="{{infoCtrl.getFav().name}}">
+    <p class="menu-item-details">{{infoCtrl.getFav().description}}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<div><fieldset>
+  <legend>Restaurant newsletter registration</legend>
+  <form name='regForm' novalidate padding-left='100px'>
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" placeholder="First Name"
+      ng-model="signUpCtrl.firstname"
+      required>
+      <br>
+
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" placeholder="Last Name"
+        ng-model="signUpCtrl.lastname"
+        required >
+        <br>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Email"
+      ng-model="signUpCtrl.email"
+      required>
+      <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+        Must be a valid email address: handle@domain format
+      </span>
+      <br>
+
+      <label for="firstname">Favorite Dish</label>
+      <input type="text" name="favorite" placeholder="Favorite dish"
+        ng-model="signUpCtrl.fav"> <span ng-if="!signUpCtrl.menuItemExists">
+         Such menu item doesn't exist!
+        </span>
+        <br>
+
+
+    <button
+      ng-disabled="regForm.$invalid"
+      ng-click="signUpCtrl.submit()">Submit</button>
+
+      <div id="info" ng-if="signUpCtrl.completed">
+        Your information has been saved! <br>
+      </div>
+  </form>
+</fieldset>
+</div>
