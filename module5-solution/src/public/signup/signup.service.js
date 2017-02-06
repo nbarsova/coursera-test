@@ -40,6 +40,16 @@ function SignUpService($http, ApiPath) {
     return service.email;
   }
 
+  service.setPhone = function (phone)
+  {
+    service.phone = phone;
+  };
+
+  service.getPhone = function ()
+  {
+    return service.phone;
+  }
+
   service.setFav = function (fav)
   {
     service.fav = fav;

@@ -21,6 +21,10 @@ InfoController.$inject = ['SignUpService','ApiPath'];
       return SignUpService.getEmail();
     }
 
+    info.getPhone = function () {
+      return SignUpService.getPhone();
+    }
+
     info.getFav = function ()
     {
       return SignUpService.getFav();
